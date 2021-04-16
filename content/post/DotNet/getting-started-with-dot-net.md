@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with .NET"
-date: 2020-02-10T21:27:15+05:30
+date: 2021-04-10T21:27:15+05:30
 images: ["/images/dotnet/dot-net.png"]
 categories: ["tutorial", ".net", "learning"]
 tags: ["getting-started", ".net", "dot-net", ".NET"]

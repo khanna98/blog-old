@@ -17,6 +17,8 @@
         </div>
     </div>
 
+    <hr />
+
     <!-- Latest article -->
     {{- range first 1 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) -}}
         {{ $page := . }}

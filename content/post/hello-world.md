@@ -1,6 +1,6 @@
 ---
 title: "Hello World"
-date: 2020-02-09T23:11:19+05:30
+date: 2021-02-09T23:11:19+05:30
 images: ['/images/alexa.png']
 draft: false
 categories: ["introduction"]

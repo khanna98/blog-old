@@ -42,12 +42,12 @@ author = "authors"
 
   [params.social]
     rss = false
-    # email = "example@example.com"
+    email = "mayankkhanna98@hotmail.com"
     # facebook = "https://facebook.com"
     twitter = "https://twitter.com/khannamayank98"
     linkedin = "https://linkedin.com/in/khanna98"
-    # stack-overflow = "https://stackoverflow.com"
-    instagram = "https://instagram.com/codelearnwork/"
+    stack-overflow = "https://stackoverflow.com/story/khanna98"
+    instagram = "https://instagram.com/mayank.khanna98/"
     github = "https://github.com/khanna98"
     # weibo = "https://www.weibo.com"
     # medium = "https://medium.com"
