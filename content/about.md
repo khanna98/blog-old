@@ -50,6 +50,10 @@ Here are a few things that I have done during my time here:
 
 ### Education
 
+**[E&ICT, IIT Guwahati](https://www.iitg.ac.in/) - Advanced PG Certification in Cloud and DevOps - (2021 - Present)**
+
+Cloud and DevOps are my new love and I found this awesome program being offered by IIT Guwahati and I did not think about it again to enroll. I am really excited to learn about the world of Cloud Computing and using the Tech Giant services like - AWS, GCP, Azure etc.
+
 **[Chitkara University](https://www.chitkara.edu.in/) - Bachelors of Engineering (CSE) - (2016 - 2020)**
 
 I did my Bachlors in Computer Science from Chitkara University. I learned a lot of things here. Infact my love for coding started here and I have never looked back again. A few of my achievements from here are:
