@@ -10,7 +10,9 @@ env:
 jobs:
   deploy-hugo-firebase:
     name: Deploy
-    container: nwbyio/hugo-firebase
+    runs-on: ubuntu-latest
+    container: 
+      image: nwbyio/hugo-firebase
     steps:
       - run: hugo
       - run: echo $PROJECT_ID
