@@ -11,9 +11,9 @@ jobs:
   deploy-hugo-firebase:
     name: Deploy
     runs-on: nwbyio/hugo-firebase
-    run: |-
-      hugo
-      echo $PROJECT_ID
-      echo $FIREBASE_TOKEN
-      firebase deploy --token $FIREBASE_TOKEN --project $PROJECT_ID --only hosting
+    steps:
+      - run: hugo
+      - run: echo $PROJECT_ID
+      - run: echo $FIREBASE_TOKEN
+      - run: firebase deploy --token $FIREBASE_TOKEN --project $PROJECT_ID --only hosting
     
