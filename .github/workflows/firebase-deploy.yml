@@ -1,0 +1,19 @@
+name: GitHub Actions - Firebase Deployment
+on:
+  push: 
+    branches: ['master']
+
+env:
+  PROJECT_ID: ${{ secrets.PROJECT_ID }}
+  FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+jobs:
+  deploy-hugo-firebase:
+    name: Deploy
+    runs-on: nwbyio/hugo-firebase
+    run: |-
+      hugo
+      echo $PROJECT_ID
+      echo $FIREBASE_TOKEN
+      firebase deploy --token $FIREBASE_TOKEN --project $PROJECT_ID --only hosting
+    
