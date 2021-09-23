@@ -3,19 +3,30 @@ on:
   push: 
     branches: ['master']
 
-env:
-  PROJECT_ID: ${{ secrets.PROJECT_ID }}
-  FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-
 jobs:
-  deploy-hugo-firebase:
-    name: Deploy
+  build:
+    name: Deploy Hugo to Firebase
     runs-on: ubuntu-latest
-    container: 
-      image: nwbyio/hugo-firebase
     steps:
-      - run: hugo
-      - run: echo $PROJECT_ID
-      - run: echo $FIREBASE_TOKEN
-      - run: firebase deploy --token $FIREBASE_TOKEN --project $PROJECT_ID --only hosting
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+    
+      - name: Hugo Setup
+        uses: peaceiris/actions-hugo@v2.4.12
+        with:
+          hugo-version: latest
+          extended: false
+      - name: Build
+        run: hugo
+
+      - name: Deploy
+        uses: w9jds/firebase-action@master
+        with: 
+          args: deploy --token $FIREBASE_TOKEN --project $PROJECT_ID --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          PROJECT_ID: ${{ secrets.PROJECT_ID }}
     
